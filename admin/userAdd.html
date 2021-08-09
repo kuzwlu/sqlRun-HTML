@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>SqlRun 添加用户</title>
+    <link rel="icon" type="image/x-icon" href="/static/assets/img/favicon.ico" />
+
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/static/assets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="/static/plugins/sweetalerts/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+    <link href="/static/plugins/sweetalerts/sweetalert.css" rel="stylesheet" type="text/css" />
+    <link href="/static/assets/css/components/custom-sweetalert.css" rel="stylesheet" type="text/css" />
+    <link href="/static/plugins/sweetalerts/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+    <link href="/static/plugins/sweetalerts/sweetalert.css" rel="stylesheet" type="text/css" />
+    <link href="/static/assets/css/components/custom-sweetalert.css" rel="stylesheet" type="text/css" />
+    <link href="/static/plugins/animate/animate.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+    <script src="/static/assets/js/libs/jquery-3.1.1.min.js"></script>
+    <script src="/static/bootstrap/js/popper.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/plugins/select2/select2.min.css">
+
+    <script src="/static/assets/js/custom.js"></script>
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+</head>
+
+<body class="alt-menu sidebar-noneoverflow" data-spy="scroll" data-target="#navSection" data-offset="140">
+    <script src="/static/assets/js/app.js"></script>
+    <script src="/static/js/main/main.js"></script>
+    <!--  BEGIN NAVBAR  -->
+    <div class="header-container fixed-top">
+        <!-- 导航栏 -->
+        <header class="header navbar navbar-expand-sm expand-header">
+            <a href="javascript:void(0);" class="sidebarCollapse" data-placement="bottom">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-menu">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </a>
+
+            <ul class="navbar-item flex-row ml-auto">
+
+                <li class="nav-item dropdown message-dropdown">
+                    <div class="dropdown-menu position-absolute e-animated e-fadeInUp"
+                        aria-labelledby="messageDropdown">
+                        <div class="">
+                            <a class="dropdown-item">
+                                <div class="">
+                                    <div class="media notification-new">
+                                        <div class="usr-profile-img mr-3">
+                                            <div class="user-profile">
+                                                <div class="">KY</div>
+                                            </div>
+                                        </div>
+                                        <div class="media-body">
+                                            <p class="meta-user-name mr-3">Kara Young</p>
+                                            <p class="message-text">Some quick example text to build the notification ..
+                                            </p>
+                                            <p class="meta-time align-self-center mb-0">2 hours ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item">
+                                <div class="">
+                                    <div class="media notification-new">
+                                        <div class="notification-icon">
+                                            <div class="icon-svg mr-3">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-mail">
+                                                    <path
+                                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                                    </path>
+                                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="media-body">
+                                            <p class="meta-title mr-3">1 new email</p>
+                                            <p class="message-text">Anderson.Daisy@mail.com</p>
+                                            <p class="meta-time align-self-center mb-0">Yesterday</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown notification-dropdown">
+                    <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="notificationDropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-bell">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                        <span class="badge badge-success"></span>
+                    </a>
+                    <div class="dropdown-menu position-absolute e-animated e-fadeInUp"
+                        aria-labelledby="notificationDropdown">
+                        <div class="notification-scroll">
+
+                            <div class="dropdown-item">
+                                <div class="media">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-message-square">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
+                                    <div class="media-body">
+                                        <div class="notification-para"><span class="user-name">Shaun Park</span>
+                                            commented
+                                            on your post.
+                                        </div>
+                                        <div class="notification-meta-time">5 mins ago</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dropdown-item">
+                                <div class="media">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-thumbs-up">
+                                        <path
+                                            d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3">
+                                        </path>
+                                    </svg>
+                                    <div class="media-body">
+                                        <div class="notification-para"><span class="user-name">Kelly Young</span> likes
+                                            your
+                                            photo
+                                        </div>
+                                        <div class="notification-meta-time">8 mins ago</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dropdown-item">
+                                <div class="media">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-send">
+                                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                    </svg>
+                                    <div class="media-body">
+                                        <div class="notification-para">Invitation successfully sent to <span
+                                                class="user-name">Amy Diaz</span></div>
+                                        <div class="notification-meta-time">10 mins ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown user-profile-dropdown  order-lg-0 order-1">
+                    <a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="userProfileDropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-user-check">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="8.5" cy="7" r="4"></circle>
+                            <polyline points="17 11 19 13 23 9"></polyline>
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu position-absolute e-animated e-fadeInUp"
+                        aria-labelledby="userProfileDropdown">
+                        <div class="user-profile-section">
+                            <div class="media mx-auto">
+                                <!-- <img src="assets/img/90x90.jpg" class="img-fluid mr-2" alt="avatar"> -->
+                                <div class="media-body">
+                                    <h5>Alan Green</h5>
+                                    <p>Web Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-item">
+                            <a href="user_profile.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-user">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                                <span>My Profile</span>
+                            </a>
+                        </div>
+                        <div class="dropdown-item">
+                            <a href="/auth_lockscreen.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-lock">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                                <span>Lock Screen</span>
+                            </a>
+                        </div>
+                        <div class="dropdown-item">
+                            <a onclick="logout()" href="javascript:void(0);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-log-out">
+                                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                    <polyline points="16 17 21 12 16 7"></polyline>
+                                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                                </svg>
+                                <span>Log Out</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </header>
+    </div>
+
+    <!--  BEGIN MAIN CONTAINER  -->
+    <div class="main-container sidebar-closed sbar-open" id="container">
+
+        <div class="overlay"></div>
+        <div class="cs-overlay"></div>
+        <div class="search-overlay"></div>
+
+        <div class="sidenav-overlay"></div>
+
+        <!--  侧边栏  -->
+        <div class="sidebar-wrapper sidebar-theme">
+
+            <nav id="sidebar">
+
+                <ul class="navbar-nav theme-brand flex-row  text-center">
+                    <li class="nav-item theme-logo">
+                        <a href="index.html">
+                            <!-- 侧边栏图片 -->
+                            <img src="/static/assets/img/90x90.jpg" class="navbar-logo" alt="logo">
+                        </a>
+                    </li>
+                    <li class="nav-item theme-text">
+                        <a href="index.html" class="nav-link"> SQL-RUN </a>
+                    </li>
+                </ul>
+
+                <ul class="list-unstyled menu-categories" id="accordionExample">
+
+                    <!-- 文件管理器 -->
+                    <li class="menu menu-heading">
+                        <div class="heading">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-circle">
+                                <circle cx="12" cy="12" r="10"></circle>
+                            </svg>
+                            <span>主页</span>
+                        </div>
+                    </li>
+
+                    <!-- 文件管理器子目录 -->
+                    <!-- <li class="menu">
+						<a href="/sqlExec.html" aria-expanded="false" class="dropdown-toggle">
+							<div class="">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+									fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+									stroke-linejoin="round" class="feather feather-folder">
+									<path
+										d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+									</path>
+								</svg>
+								<span>SQL执行器</span>
+							</div>
+						</a>
+					</li> -->
+
+                </ul>
+
+            </nav>
+
+        </div>
+        <!--  BEGIN CONTENT AREA  -->
+        <div id="content" class="main-content">
+            <div class="container">
+                <div class="container">
+
+                    <div class="row">
+                        <div id="flStackForm" class="col-lg-12 layout-spacing layout-top-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4>添加用户</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area">
+                                    <div class="form-row mb-4">
+                                        <div class="form-group col-md-6">
+                                            <label for="user">用户名</label>
+                                            <input type="text" class="form-control" id="user" placeholder="user">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="username">别名</label>
+                                            <input type="text" class="form-control" id="username"
+                                                placeholder="username">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="password">密码</label>
+                                            <input type="password" class="form-control" id="password"
+                                                placeholder="password">
+                                        </div>
+
+
+                                    </div>
+                                    <div class="form-group mb-4">
+                                        <label for="role">所属组</label>
+                                        <select id="role" class="form-control">
+                                            <option selected>普通用户</option>
+                                            <option>管理员</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group mb-4">
+                                        <label for="sql">拥有数据库权限</label>
+                                        <select id="sql" class="form-control tagging" multiple="multiple">
+                                        </select>
+                                    </div>
+                                    <div class="form-group mb-4">
+                                        <label for="status">状态</label>
+                                        <select id="status" class="form-control">
+                                            <option selected>启用</option>
+                                            <option>禁用</option>
+                                        </select>
+                                    </div>
+                                    <button onclick="addUser()" type="submit" style="    float: right;"
+                                        class="btn btn-primary mt-3">提交</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--  END CONTENT AREA  -->
+    </div>
+
+    </div>
+    <script src="/static/js/main/main.js"></script>
+    <script src="/config.js"></script>
+    <script src="/static/plugins/sweetalerts/sweetalert2.min.js"></script>
+    <script src="/static/plugins/sweetalerts/custom-sweetalert.js"></script>
+    <script src="/static/plugins/sweetalerts/sweetalert2.min.js"></script>
+    <script src="/static/plugins/sweetalerts/custom-sweetalert.js"></script>
+
+    <script src="/static/assets/js/app.js"></script>
+    <script>
+        isLogin();
+        $(document).ready(function () {
+            App.init();
+        });
+    </script>
+
+    <script src="/static/plugins/highlight/highlight.pack.js"></script>
+    <script src="/static/assets/js/custom.js"></script>
+    <script src="/static/plugins/highlight/highlight.pack.js"></script>
+    <script src="/static/plugins/select2/select2.min.js"></script>
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+
+    <!--  BEGIN CUSTOM SCRIPTS FILE  -->
+    <script src="/static/assets/js/scrollspyNav.js"></script>
+
+    <script>
+        getUserInfo();
+        getMenu();
+
+        var ss = $("#sql").select2({
+            tags: true,
+        });
+
+        let dataSourceList = post(serverHost + "/admin/dataSource/getList");
+        if (dataSourceList.recordsTotal >= 1) {
+            let temp = "";
+            $.each(dataSourceList.data, function (index, value) {
+                if (value.status == 1) {
+                    temp = temp + "<option>" + value.dbname + "</option>";
+                }
+            })
+            $("#sql").html(temp);
+        }
+
+        function addUser() {
+            let user = $("#user").val();
+            let username = $("#username").val();
+            let password = $("#password").val();
+            let role = $("#role").val();
+            let sql = $("#sql").val();
+            let status = $("#status").val();
+            if (role == "管理员") {
+                role = 1
+            } else if (role == "普通用户") {
+                role = 2;
+            } else {
+                role = "user";
+            }
+            if (status == "启用") {
+                status = 1;
+            } else {
+                status = 0;
+            }
+            var flag = true;
+            if (user == null || user == "") {
+                msg("user");
+                flag = false;
+            }
+            if (username == null || username == "") {
+                msg("username");
+                flag = false;
+            }
+            if (password == null || password == "") {
+                msg("password");
+                flag = false;
+            }
+            if (role == null) {
+                msg("role");
+                flag = false;
+            }
+            if (status == null) {
+                msg("status");
+                flag = false;
+            }
+            var data = "{\"user\":" + user + "}";
+            if (flag) {
+                var params = JSON.stringify({ user: user, userName: username, password: password, roleId: role, status: status ,sql:sql});
+                let result = postJson(serverHost + "/admin/user/add?sql="+sql, params);
+                if (result.code == 200 && result.success == true) {
+                    swal({
+                        title: '添加成功',
+                        text: "",
+                        type: 'success',
+                        padding: '2em'
+                    })
+                    setTimeout("window.location.href = '/admin/userList.html'", 2000);
+                }else{
+                    console.log(result);
+                    swal({
+                        title: "添加失败,"+result.message,
+                        text: "",
+                        type: 'error',
+                        padding: '2em'
+                    })
+                }
+            }
+        }
+
+        function msg(tips) {
+            swal({
+                title: tips + '不能为空',
+                text: "",
+                type: 'warning',
+                padding: '2em'
+            })
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

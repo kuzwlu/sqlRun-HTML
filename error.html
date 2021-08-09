@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>error</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/fonts/font-awesome-4.7.0/css/font-awesome.min.css}">
+    <link rel="stylesheet" th:href="@{/css/util.css}">
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+
+<body>
+<div class="dowebok">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <div class="login100-pic js-tilt" data-tilt>
+                <img th:src="@{/images/img-01.png}" alt="IMG" style="margin-top: -35%;">
+            </div>
+            <div class="login100-form validate-form">
+                <span class="login100-form-title" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}">
+					error
+				</span>
+
+                <div class="container-login100-form-btn">
+                    <a class="login100-form-btn" href="/login" style="text-decoration:none;">
+                        返回登录
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
